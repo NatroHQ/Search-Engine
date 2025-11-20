@@ -1,0 +1,47 @@
+{
+  "name": "natro-search",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "crawler": "tsx scripts/run-enhanced-crawler.ts",
+    "db:migrate": "psql $DATABASE_URL -f scripts/001_create_tables.sql && psql $DATABASE_URL -f scripts/002_seed_initial_urls.sql && psql $DATABASE_URL -f scripts/003_add_content_types.sql && psql $DATABASE_URL -f scripts/004_add_token_system.sql && psql $DATABASE_URL -f scripts/005_add_behavior_tracking.sql",
+    "db:reset": "psql $DATABASE_URL -c 'DROP SCHEMA public CASCADE; CREATE SCHEMA public;' && npm run db:migrate",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@vercel/analytics": "latest",
+    "ai": "latest",
+    "canvas": "latest",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "crypto": "latest",
+    "jsdom": "latest",
+    "lucide-react": "^0.454.0",
+    "next": "16.0.3",
+    "pg": "latest",
+    "pg-native": "latest",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss-animate": "^1.0.7",
+    "tw-animate-css": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22",
+    "@types/pg": "^8.10.9",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
+    "postcss": "^8.5",
+    "tailwindcss": "^4.1.9",
+    "tsx": "^4.7.0",
+    "typescript": "^5"
+  },
+  "trustedDependencies": [
+    "pg-native"
+  ]
+}
