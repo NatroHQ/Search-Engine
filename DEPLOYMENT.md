@@ -98,7 +98,7 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Clone repository
-git clone https://github.com/yourusername/natro-search.git
+git clone https://github.com/NatroHQ/natro-search.git
 cd natro-search
 
 # Install dependencies
@@ -267,5 +267,5 @@ Target metrics:
 ## Support
 
 For issues or questions:
-- GitHub Issues: https://github.com/yourusername/natro-search/issues
+- GitHub Issues: https://github.com/NatroHQ/natro-search/issues
 - Documentation: https://search.natro.io/docs
