@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
         },
       })
     } catch (dbError) {
-      console.error("[v0] Database operation failed:", dbError)
+      console.error("Database operation failed:", dbError)
       // Return demo mode if database fails
       return NextResponse.json({
         success: true,
@@ -62,7 +62,7 @@ export async function GET(request: NextRequest) {
       })
     }
   } catch (error) {
-    console.error("[v0] Balance API error:", error)
+    console.error("Balance API error:", error)
     // Always return valid JSON
     return NextResponse.json({
       success: true,
